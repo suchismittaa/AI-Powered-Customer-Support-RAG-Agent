@@ -16,7 +16,7 @@ chromadb==0.6.3
 sentence-transformers==3.4.1
 transformers==4.51.3
 torch==2.6.0
-huggingface-hub==0.29.3
+huggingface-hub==0.30.0
 
 # ── LLM Provider ─────────────────────────────────────────────────────────────
 groq==0.18.0
