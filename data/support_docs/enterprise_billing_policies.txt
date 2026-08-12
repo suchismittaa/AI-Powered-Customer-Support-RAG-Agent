@@ -1,0 +1,152 @@
+ENTERPRISE BILLING & SUBSCRIPTION POLICIES — VERSION 4.2
+Effective Date: January 1, 2025 | Last Reviewed: March 2025
+
+═══════════════════════════════════════════════════════════════
+SECTION 1: SUBSCRIPTION TIERS AND PRICING
+═══════════════════════════════════════════════════════════════
+
+1.1 AVAILABLE PLANS
+
+STARTER PLAN — $29/month or $290/year (save 17%)
+- Up to 3 users
+- 10 GB storage
+- Email support (48-hour response SLA)
+- Basic analytics dashboard
+- API access: 10,000 calls/month
+- Integrations: Slack, Google Workspace
+
+GROWTH PLAN — $99/month or $990/year (save 17%)
+- Up to 25 users
+- 100 GB storage
+- Priority email + chat support (12-hour response SLA)
+- Advanced analytics and custom reports
+- API access: 100,000 calls/month
+- Integrations: All Starter + Salesforce, HubSpot, Zapier
+- Custom domain support
+- SSO via Google and Microsoft
+
+BUSINESS PLAN — $299/month or $2,990/year (save 17%)
+- Up to 100 users
+- 1 TB storage
+- 24/7 phone + email + chat support (4-hour response SLA)
+- Full analytics suite + data export
+- API access: 1,000,000 calls/month
+- All integrations included
+- SSO + SAML 2.0
+- Advanced security controls
+- Dedicated account manager (quarterly check-ins)
+- SLA guarantee: 99.9% uptime
+
+ENTERPRISE PLAN — Custom pricing (contact sales@company.com)
+- Unlimited users
+- Custom storage allocation
+- 24/7 dedicated support line (1-hour response SLA)
+- Custom SLA agreements
+- On-premise deployment option
+- Custom integrations and API limits
+- Dedicated customer success manager (weekly check-ins)
+- Security audit support and compliance documentation (SOC2, HIPAA, GDPR)
+- Custom contract terms and NET-30/60/90 payment options
+
+1.2 PLAN COMPARISON NOTES
+Users cannot mix plans across teams. All users in a workspace must be on the same plan. Guest users (view-only, no editing rights) do not count toward the user limit. API calls reset on the 1st of each calendar month, regardless of billing date. Unused API calls do not roll over.
+
+═══════════════════════════════════════════════════════════════
+SECTION 2: BILLING CYCLES AND PAYMENT
+═══════════════════════════════════════════════════════════════
+
+2.1 BILLING DATES
+Monthly plans bill on the same calendar day each month as the original signup date. Annual plans bill once per year on the anniversary of the original signup date. If signup occurs on the 29th, 30th, or 31st, billing occurs on the last day of shorter months.
+
+2.2 ACCEPTED PAYMENT METHODS
+- Credit cards: Visa, Mastercard, American Express, Discover, UnionPay
+- Debit cards: Must have Visa or Mastercard logo
+- PayPal: Available for monthly plans only, not annual
+- ACH bank transfer: Available for Business and Enterprise plans (annual only)
+- Wire transfer: Enterprise only, $25 processing fee applies
+- Corporate purchase orders: Enterprise only, requires pre-approval
+- Cryptocurrency: Not accepted
+
+2.3 PAYMENT PROCESSING
+Payments are processed by Stripe (for cards/PayPal) or directly via ACH for bank transfers. All transactions are encrypted with TLS 1.3. We do not store full card numbers — only the last 4 digits and expiry are retained for reference. PCI-DSS Level 1 compliant.
+
+2.4 FAILED PAYMENTS
+When a payment fails, the following retry schedule applies:
+- Day 0: Initial failure — notification email sent
+- Day 3: First retry attempt
+- Day 5: Second retry attempt — warning email sent
+- Day 7: Third retry attempt — account downgrade warning
+- Day 10: Final retry — account suspended if still failing
+During the grace period (days 0-10), full account access is maintained. After suspension, data is preserved for 30 days before permanent deletion.
+
+2.5 TAXES AND VAT
+Prices displayed are exclusive of applicable taxes. Sales tax is collected for US customers in states where we have nexus. VAT is collected for EU customers based on their country of residence. UK VAT (20%) applies to UK customers. To add VAT number for business accounts: Settings → Billing → Tax Information. Retrospective VAT invoices are available for the past 12 months.
+
+═══════════════════════════════════════════════════════════════
+SECTION 3: UPGRADES, DOWNGRADES, AND CANCELLATIONS
+═══════════════════════════════════════════════════════════════
+
+3.1 UPGRADES
+Plan upgrades take effect immediately. You are charged a prorated amount for the remainder of the current billing period at the new plan rate, minus any credit from the current plan. Example: If you upgrade from Starter ($29) to Growth ($99) with 15 days remaining in a 30-day cycle, you are charged: (($99 - $29) / 30) × 15 = $35.
+
+3.2 DOWNGRADES
+Downgrades take effect at the end of the current billing period. If your usage exceeds the new plan limits at the time of downgrade (e.g., more users than allowed), you must reduce usage before the downgrade completes, or it will be blocked. No prorated refund is issued for downgrades.
+
+3.3 CANCELLATIONS
+Cancel any time from Account → Subscription → Cancel Plan. Cancellations take effect at end of current period. Monthly plan cancellation: access continues until period end, no refund for partial months. Annual plan cancellation: if within 30 days of renewal and unused, full refund available. After 30 days of annual period: prorated refund for full unused months remaining (not days).
+
+3.4 REACTIVATION
+Cancelled accounts can be reactivated within 90 days. All data is preserved during this window. After 90 days, data is permanently deleted and cannot be recovered. Reactivating a cancelled account does not restore previous promotional pricing.
+
+═══════════════════════════════════════════════════════════════
+SECTION 4: REFUND POLICY
+═══════════════════════════════════════════════════════════════
+
+4.1 STANDARD REFUND ELIGIBILITY
+- Monthly plans: Refunds available within 7 days of charge if service was not used during that period
+- Annual plans: Full refund within 30 days of purchase/renewal with no usage
+- Annual plans (partial): Prorated refund for full unused months if cancelled after 30 days
+- Add-ons (storage, extra users): Refundable within 7 days if unused
+
+4.2 NON-REFUNDABLE ITEMS
+- API call overages that have already been consumed
+- Custom integration or professional services fees
+- Training or onboarding session fees
+- Any charges more than 12 months old
+- Charges disputed through credit card chargebacks (forfeit refund eligibility)
+
+4.3 REFUND PROCESS
+Submit refund requests via: Support Portal → Billing → Request Refund. Include your account ID, invoice number, and reason. Processing time: 5-10 business days to original payment method. Stripe card refunds typically appear in 5-7 days. ACH refunds take 7-10 business days. PayPal refunds appear within 1-3 days.
+
+4.4 CHARGEBACKS
+If you initiate a chargeback with your bank rather than contacting us first, your account is immediately suspended pending investigation. Chargebacks that are found to be fraudulent or unjustified will result in permanent account termination. We strongly recommend contacting billing support before initiating a chargeback.
+
+═══════════════════════════════════════════════════════════════
+SECTION 5: ENTERPRISE AND CUSTOM AGREEMENTS
+═══════════════════════════════════════════════════════════════
+
+5.1 ENTERPRISE CONTRACT TERMS
+Enterprise contracts are negotiated individually and supersede these standard policies where they conflict. Standard enterprise contracts are 12-month minimum terms. Multi-year contracts (2-3 years) receive additional discounts of 10% and 15% respectively. Enterprise contracts include: custom SLA, dedicated infrastructure option, security review access, compliance documentation.
+
+5.2 VOLUME DISCOUNTS
+Organizations with 100+ users qualify for volume pricing. Contact sales@company.com for a custom quote. Non-profits and educational institutions receive 25% discount on all plans upon verification.
+
+5.3 RESELLER AND PARTNER BILLING
+Authorized resellers manage their own billing relationships with end customers. Reseller accounts receive wholesale pricing (20-35% below list price depending on tier). Reseller agreements require a separate Partner Agreement signed with our Partnerships team.
+
+═══════════════════════════════════════════════════════════════
+SECTION 6: BILLING DISPUTES AND ESCALATION
+═══════════════════════════════════════════════════════════════
+
+6.1 DISPUTE PROCESS
+Step 1: Contact billing support via support portal or billing@company.com
+Step 2: Provide invoice number, disputed amount, and explanation
+Step 3: Our team investigates within 3 business days
+Step 4: Resolution communicated via email with credit, refund, or explanation
+Step 5: If unresolved, escalate to billing-escalations@company.com (VP Finance reviews within 5 days)
+
+6.2 BILLING ERROR CORRECTIONS
+If we made a billing error, we will correct it retroactively for up to 12 months. Corrections are applied as account credits or direct refunds depending on your preference. We proactively audit for billing errors quarterly and notify affected customers.
+
+Contact billing support: billing@company.com | +1-800-555-0100 (Business/Enterprise only)
+Support portal: support.company.com/billing

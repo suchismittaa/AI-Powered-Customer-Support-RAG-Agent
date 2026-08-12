@@ -1,0 +1,46 @@
+# AI Customer Support RAG Agent v2 — Dependencies
+# Python >= 3.10 required
+
+# ── Core LangChain ────────────────────────────────────────────────────────────
+langchain==0.3.25
+langchain-community==0.3.23
+langchain-core==0.3.60
+langchain-chroma==0.2.4
+langchain-huggingface==0.1.2
+langchain-groq==0.3.2
+
+# ── Vector Database ───────────────────────────────────────────────────────────
+chromadb==0.6.3
+
+# ── Embeddings ────────────────────────────────────────────────────────────────
+sentence-transformers==3.4.1
+transformers==4.51.3
+torch==2.6.0
+huggingface-hub==0.29.3
+
+# ── LLM Provider ─────────────────────────────────────────────────────────────
+groq==0.18.0
+
+# ── Document Loading ──────────────────────────────────────────────────────────
+pypdf==5.4.0
+
+# ── Web Framework ─────────────────────────────────────────────────────────────
+fastapi==0.115.12
+uvicorn[standard]==0.34.2
+pydantic==2.11.3
+
+# ── Frontend ──────────────────────────────────────────────────────────────────
+streamlit==1.44.1
+pandas==2.2.3
+
+# ── Auth & Security ───────────────────────────────────────────────────────────
+PyJWT==2.10.1
+bcrypt==4.3.0
+
+# ── Kaggle (optional, for real data download) ─────────────────────────────────
+kaggle==1.7.4
+
+# ── Utilities ─────────────────────────────────────────────────────────────────
+python-dotenv==1.1.0
+requests==2.32.3
+numpy==1.26.4

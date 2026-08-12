@@ -1,0 +1,25 @@
+TECHNICAL SUPPORT - FREQUENTLY ASKED QUESTIONS
+
+Q: The application won't load. How do I fix it?
+A: First, try a hard refresh (Ctrl+Shift+R on Windows/Linux, Cmd+Shift+R on Mac) to clear cached files. If that doesn't work, clear your browser cache and cookies under browser Settings > Privacy > Clear Browsing Data. Try an incognito/private window to rule out extensions causing conflicts. Check our status page at status.example.com for any ongoing incidents. If the problem persists, try a different browser. If all browsers fail, contact support with your browser version and operating system.
+
+Q: Why is the application running slowly?
+A: Slow performance is often caused by browser extensions, insufficient RAM, or network issues. Disable browser extensions temporarily to test. Ensure you have at least 4GB of free RAM. Check your internet speed — we recommend at least 10 Mbps. Clear your browser cache as accumulated data can slow loading. Try closing other browser tabs and applications. If performance issues are consistent, try a different network (e.g., switch from WiFi to ethernet). Contact support if slowness persists across all tests.
+
+Q: I can't upload files. What's wrong?
+A: File upload failures have several common causes. Check that your file meets size limits (maximum 100MB per file, 1GB total per upload session). Supported formats are PDF, DOC, DOCX, XLS, XLSX, PNG, JPG, GIF, and MP4. Ensure your internet connection is stable during upload — disconnections cancel uploads. Check that your browser allows our domain to access local files (browser security settings). Try uploading from a different browser. For files larger than 100MB, use our desktop app which supports chunked uploads.
+
+Q: How do I integrate with third-party tools?
+A: Integrations are managed under Account > Integrations. We officially support Slack, Microsoft Teams, Zapier, Salesforce, HubSpot, GitHub, and Jira. Click the integration name, then "Connect" and follow the OAuth authorization flow. API access for custom integrations is available on Business plans and above — generate API keys under Account > Developer > API Keys. Our REST API documentation is available at docs.example.com/api. Webhook support allows real-time notifications to your systems.
+
+Q: My data isn't syncing across devices. What should I do?
+A: Data sync issues are usually caused by offline mode being enabled or account session conflicts. Check that you're connected to the internet and that offline mode is disabled in Settings > Sync. Sign out and sign back in on all affected devices to refresh your session. If you recently changed your password, all devices need to re-authenticate. Sync conflicts (editing the same item on multiple devices offline) are resolved by keeping the most recently modified version. Contact support if specific items consistently fail to sync.
+
+Q: How do I export my data?
+A: Export your data at any time from Account > Data Export. Choose your export format (CSV, JSON, PDF, or Excel) and select which data types to include. Large exports are processed in the background and emailed to you when ready, typically within 1 hour. Scheduled automatic exports are available on Business plans. For GDPR data portability requests, use the "Export All Personal Data" option which compiles a complete data archive within 72 hours.
+
+Q: The mobile app keeps crashing. How do I fix it?
+A: Force-close and restart the app. If crashes persist, check that you have the latest app version from the App Store or Google Play Store — older versions may have known bugs. Clear the app cache: on Android go to Settings > Apps > [App Name] > Storage > Clear Cache; on iOS, delete and reinstall the app (your data is cloud-synced and won't be lost). Ensure your device has at least 200MB of free storage. Check that your OS version is supported (iOS 14+ or Android 8+). Report persistent crashes with your device model and OS version.
+
+Q: How do I set up email notifications?
+A: Configure email notifications under Account > Settings > Notifications. You can enable or disable specific notification types: account activity (logins, password changes), billing (invoices, payment failures), product updates (new features, maintenance windows), and collaboration (mentions, shared items). Set your preferred frequency — immediate, daily digest, or weekly summary. Add multiple email addresses if needed. To stop all emails, click "Unsubscribe" at the bottom of any notification email, which unsubscribes from marketing but preserves critical security notifications.

@@ -1,0 +1,25 @@
+ACCOUNT MANAGEMENT - FREQUENTLY ASKED QUESTIONS
+
+Q: How do I reset my password?
+A: To reset your password, click "Forgot Password" on the login page and enter your registered email address. You will receive a password reset link within 5 minutes. The link expires after 1 hour. If you don't receive the email, check your spam folder or request another reset. For accounts with two-factor authentication enabled, you will also need to verify via your authenticator app or backup codes after resetting.
+
+Q: How do I enable two-factor authentication (2FA)?
+A: Enable 2FA under Account > Security > Two-Factor Authentication. We support authenticator apps (Google Authenticator, Authy), SMS verification, and hardware security keys (FIDO2/WebAuthn). We recommend authenticator apps over SMS for better security. After enabling 2FA, save your backup codes in a secure location — these are required if you lose access to your authentication method.
+
+Q: My account is locked. What do I do?
+A: Accounts are locked after 5 consecutive failed login attempts as a security measure. The lockout lasts 30 minutes automatically. To unlock immediately, click "Unlock Account" in the lockout email sent to your registered address. If you no longer have access to that email, contact support with government-issued ID for identity verification. Suspicious lockouts should be reported — they may indicate unauthorized access attempts.
+
+Q: How do I change my email address?
+A: To change your email address, go to Account > Profile > Contact Information. Enter your new email and current password to confirm. A verification link is sent to the new email — click it within 24 hours to complete the change. Until verified, your old email remains active. If you've lost access to both email addresses, contact support for assisted account recovery with identity verification.
+
+Q: How do I delete my account?
+A: To delete your account, go to Account > Settings > Delete Account. You must enter your password to confirm. Data deletion is permanent and cannot be undone. Before deletion, export your data from Account > Data Export. Paid subscriptions must be cancelled first. Account deletion takes effect immediately for access, and all personal data is purged within 30 days per our privacy policy. Billing records are retained for 7 years for legal compliance.
+
+Q: Can I have multiple users on one account?
+A: Multi-user access is available on Team and Enterprise plans. Under Account > Team Management, invite members via email and assign roles: Admin (full access), Editor (create/edit content), or Viewer (read-only). The account owner can manage permissions at any time. Per-user pricing applies — see our pricing page for current team rates. Single-user plans cannot share credentials per our Terms of Service.
+
+Q: How do I recover a deleted account?
+A: Deleted accounts can be recovered within 30 days of deletion by contacting support. After 30 days, all data is permanently purged and recovery is impossible. To initiate recovery, provide your account email, the approximate deletion date, and verify your identity. If subscription was active at deletion, you may receive prorated credit. After recovery, set a new password and review security settings.
+
+Q: How do I change my username?
+A: Usernames can be changed once every 30 days. Go to Account > Profile > Username to make changes. Your old username becomes available for others to claim immediately after change. Public content previously published under your old username will show the new username. API tokens and integrations using your username for authentication must be updated manually after the change.

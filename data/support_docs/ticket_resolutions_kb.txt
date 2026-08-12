@@ -1,0 +1,129 @@
+CUSTOMER SUPPORT TICKET RESOLUTIONS — KNOWLEDGE BASE
+Category: Resolved Tickets | Volume: High-Frequency Issues
+Last Updated: Q1 2025
+
+═══════════════════════════════════════════════════════════════
+TICKET CATEGORY: AUTHENTICATION & LOGIN ISSUES
+═══════════════════════════════════════════════════════════════
+
+TICKET #4821 — Cannot log in after password reset
+SYMPTOM: Customer completes password reset flow but still cannot log in. Page shows "Invalid credentials" error.
+ROOT CAUSE: Browser cached the old session cookie, conflicting with new credentials.
+RESOLUTION: 1) Clear browser cookies and cache completely (not just history). 2) Try an incognito/private browser window. 3) If using a password manager, ensure the saved password was updated to the new one. 4) Wait 5 minutes after reset before attempting login — our auth service has a brief propagation delay.
+PREVENTION: We now show a "Clear your cache" reminder on the post-reset confirmation page.
+ESCALATE IF: Issue persists after all steps above — may indicate account corruption requiring backend reset.
+
+TICKET #5103 — Two-factor authentication app lost / new phone
+SYMPTOM: Customer got a new phone and can no longer access their authenticator app codes.
+RESOLUTION: 1) Ask customer to locate their backup codes (provided during 2FA setup, should be saved in a secure location). 2) If they have backup codes: Account → Security → Use Backup Code → enter code → disable and re-enable 2FA with new device. 3) If NO backup codes: Customer must complete identity verification — they need to email security@company.com from their registered email address with a copy of government-issued ID. Verification takes 2-3 business days. Account access is suspended during this period for security.
+ESCALATE IF: Customer claims they never received backup codes during setup (potential setup flow bug — report to engineering).
+
+TICKET #5287 — Account locked after failed login attempts
+SYMPTOM: Customer sees "Account temporarily locked" message.
+RESOLUTION: Accounts lock after 5 failed login attempts. Lock automatically lifts after 30 minutes. For immediate unlock: 1) Send unlock link to registered email via the "Unlock Account" button on login page. 2) If customer can't access registered email, identity verification required. 3) Check if customer is using correct email (common issue: work vs personal email confusion). 4) Remind customer that passwords are case-sensitive.
+SECURITY NOTE: If customer reports they did NOT attempt multiple logins, this may indicate an unauthorized access attempt. Advise them to check active sessions (Account → Security → Active Sessions), enable 2FA immediately, and change password.
+
+TICKET #5891 — SSO login redirecting to wrong workspace
+SYMPTOM: Enterprise customer logs in via SSO but lands in a different organization's workspace.
+ROOT CAUSE: Multiple email domains mapped to different SSO configurations. User's email domain was recently added to a second organization.
+RESOLUTION: 1) Customer must use the specific workspace login URL (company.yourapp.com) rather than the generic login page. 2) IT admin needs to verify domain mapping in Admin → SSO Configuration. 3) If domain is claimed by wrong org, contact enterprise-support@company.com — domain disputes require verification of domain ownership.
+
+TICKET #6102 — Login page shows "Service Unavailable" error
+SYMPTOM: Customer cannot reach the login page at all — 503 error.
+RESOLUTION: 1) Check status.company.com for any active incidents. 2) If no incident posted, try alternative access at app2.company.com (backup endpoint). 3) If issue is widespread, it may be a CDN issue — ask customer their geographic location and ISP. 4) Advise customer to check our @CompanyStatus Twitter/X for real-time updates.
+ESCALATE IF: Issue not reflected on status page — page may not have been updated. Escalate to on-call engineering immediately.
+
+═══════════════════════════════════════════════════════════════
+TICKET CATEGORY: BILLING & PAYMENT ISSUES
+═══════════════════════════════════════════════════════════════
+
+TICKET #3201 — Charged after cancellation
+SYMPTOM: Customer cancelled subscription but was still charged on the next billing date.
+ROOT CAUSE A: Customer cancelled after the billing date cutoff (charges are processed at midnight UTC on billing day — cancellations within 24 hours prior may not prevent the charge).
+ROOT CAUSE B: Customer had multiple active subscriptions (e.g., both monthly add-on and annual base plan) and only cancelled one.
+RESOLUTION: 1) Verify exact cancellation timestamp in admin panel. 2) If cancelled before billing date: issue full refund, investigate system issue. 3) If cancelled after billing date: per policy, no refund for monthly plans; for annual plans, assess refund eligibility based on usage. 4) Check for duplicate subscriptions in customer's account. 5) Confirm cancellation is now active for future cycles.
+
+TICKET #3445 — Credit card declined but no issue with card
+SYMPTOM: Customer's credit card is declined by our system despite having sufficient funds and no issues reported by their bank.
+COMMON CAUSES: 1) Card has international transaction restrictions. 2) Bank's fraud detection blocked an unusual charge pattern. 3) Billing address doesn't match bank records exactly (AVS mismatch). 4) Card requires 3D Secure authentication which wasn't triggered correctly.
+RESOLUTION: 1) Ask customer to verify billing address matches exactly what their bank has on file. 2) Ask them to call their bank and authorize the transaction manually, then retry. 3) Try adding the card again (sometimes re-entry resolves AVS issues). 4) Try a different payment method (PayPal often works when cards fail). 5) If PayPal also fails, it may be a Stripe regional issue — report to billing team.
+
+TICKET #3788 — Invoice shows wrong company name / VAT number
+SYMPTOM: Customer needs invoice corrected for accounting/tax purposes.
+RESOLUTION: 1) Update billing details in Account → Billing → Company Information. 2) Future invoices will reflect the new details automatically. 3) For retroactive corrections on past invoices: billing team can reissue corrected invoices for up to 12 months back. Submit request via billing@company.com with account ID and invoice numbers. 4) VAT number changes require re-verification for EU accounts.
+
+TICKET #4012 — Annual subscription renewal unexpected charge
+SYMPTOM: Customer was charged annual renewal and wasn't expecting it.
+RESOLUTION: 1) Verify that renewal reminder emails were sent (should send 30 days and 7 days before renewal to primary billing contact). 2) Check if customer changed email and missed reminders. 3) Check if customer meant to cancel but only downgraded instead. 4) Annual plan renewed within 30 days with no usage: eligible for full refund per policy. 5) Annual plan renewed more than 30 days ago: evaluate case-by-case, prorated refund for unused months may apply.
+
+TICKET #4567 — Need receipts/invoices for expense reporting
+SYMPTOM: Customer needs past invoices for expense reimbursement.
+RESOLUTION: All invoices are available in Account → Billing → Invoice History. Customers can download individual invoices as PDF or bulk export up to 24 months. If invoices older than 24 months are needed, submit request to billing@company.com. For expense reporting, our invoices include all required fields: company name, address, VAT number, line items, and payment confirmation.
+
+═══════════════════════════════════════════════════════════════
+TICKET CATEGORY: DATA & PRIVACY
+═══════════════════════════════════════════════════════════════
+
+TICKET #7201 — GDPR data deletion request
+SYMPTOM: Customer requests deletion of all their personal data under GDPR Article 17 (Right to Erasure).
+RESOLUTION: 1) Verify identity — request must come from the account email address. 2) Explain what deletion includes: account data, usage logs, personal information. What is RETAINED per legal obligation: billing records (7 years, financial regulations), fraud prevention logs (2 years). 3) Process deletion request through Admin → Compliance → GDPR Requests. 4) Deletion completes within 30 days per GDPR requirement. 5) Send confirmation email with deletion certificate. 6) Note: deletion is irreversible — confirm customer understands.
+ESCALATE: All GDPR requests must be logged in our compliance tracker regardless of resolution.
+
+TICKET #7445 — Data export / portability request
+SYMPTOM: Customer wants to export all their data to move to another service.
+RESOLUTION: Full data export available at Account → Data Export. Choose format: JSON (complete), CSV (tabular data only), or PDF (reports). Large exports are processed asynchronously and emailed when ready (up to 4 hours for large accounts). Export includes: all content, settings, user data, activity logs, API usage history. Does NOT include: billing records (request separately), content created by team members who have since deleted their accounts.
+
+TICKET #7823 — Suspected unauthorized access / data breach concern
+SYMPTOM: Customer reports suspicious activity or believes their data was accessed without authorization.
+RESOLUTION — TREAT AS HIGH PRIORITY: 1) Immediately check Account → Security → Login History with customer. 2) If unauthorized logins confirmed: force sign out all sessions, reset password, enable 2FA, revoke all API keys. 3) Escalate to security@company.com immediately — do not attempt to investigate alone. 4) Our security team responds within 1 hour. 5) If customer data was accessed, our incident response team handles notification requirements. 6) Document everything in the ticket with timestamps.
+THIS IS AN L2 ESCALATION — ALWAYS ESCALATE.
+
+═══════════════════════════════════════════════════════════════
+TICKET CATEGORY: TECHNICAL ISSUES
+═══════════════════════════════════════════════════════════════
+
+TICKET #8901 — API returning 429 Too Many Requests error
+SYMPTOM: Customer's integration is getting rate limit errors.
+RESOLUTION: 1) Check customer's current plan API limits (Starter: 10k/month, Growth: 100k/month, Business: 1M/month). 2) Check if they've hit monthly limit or per-minute rate limit (all plans: 60 requests/minute burst limit). 3) Implement exponential backoff in their code — wait 1s, then 2s, then 4s between retries. 4) Check if API calls are being made efficiently (batching vs. individual calls). 5) If legitimate usage exceeds plan, recommend upgrade. 6) Temporary overage allowance (10% buffer) can be granted once per 6 months by support — requires manager approval.
+
+TICKET #9103 — Webhook not receiving events
+SYMPTOM: Customer set up webhook endpoint but isn't receiving events.
+RESOLUTION: 1) Verify webhook URL is HTTPS (HTTP webhooks not supported). 2) Check webhook is enabled in Settings → Integrations → Webhooks → Verify endpoint shows "Active". 3) Test with the "Send Test Event" button — check if test arrives. 4) Customer's server must respond with HTTP 200 within 10 seconds or event is marked failed and retried. 5) Check our webhook delivery logs in Settings → Integrations → Webhooks → Delivery Log for failure reasons. 6) Common failure: customer's server is behind a firewall — provide our IP whitelist (available in API documentation). 7) We retry failed webhooks: 5 min, 30 min, 2 hours, 6 hours, 24 hours.
+
+TICKET #9456 — Slow dashboard loading times
+SYMPTOM: Dashboard takes 10-30 seconds to load or times out.
+RESOLUTION: 1) Check status.company.com for performance issues. 2) Ask for browser and OS details. 3) Test in different browser — known issue with some Firefox versions and our chart library. 4) Clear browser cache. 5) For accounts with very large datasets (>500k records), dashboard loads can be slow — recommend using date filters to limit data range. 6) Check if customer is using a VPN — can significantly impact performance due to routing. 7) If Chrome, check for conflicting extensions (ad blockers sometimes interfere).
+ESCALATE IF: Dashboard slow for multiple customers simultaneously — may indicate backend performance issue.
+
+TICKET #9801 — CSV import failing with no error message
+SYMPTOM: Customer uploads CSV file and gets a silent failure — no data imported, no error shown.
+ROOT CAUSES: 1) File encoding issue (must be UTF-8, not UTF-16 or Windows-1252). 2) File exceeds 50MB limit. 3) Required columns missing or named differently than expected. 4) Date format mismatch (system expects YYYY-MM-DD). 5) Special characters in column headers.
+RESOLUTION: 1) Download our CSV template from Import → Download Template. 2) Check encoding: save as UTF-8 CSV in Excel (File → Save As → CSV UTF-8). 3) Verify all required columns present. 4) Check file size. 5) Remove special characters from headers. 6) If still failing, ask customer to share first 5 rows (no sensitive data) for debugging.
+
+═══════════════════════════════════════════════════════════════
+TICKET CATEGORY: ACCOUNT MANAGEMENT
+═══════════════════════════════════════════════════════════════
+
+TICKET #2101 — How to transfer account ownership
+SYMPTOM: Company employee leaving — need to transfer ownership to new admin.
+RESOLUTION: Current owner must: 1) Ensure new owner has an account in the workspace. 2) Go to Admin → Team → click on new owner's name → "Transfer Ownership". 3) New owner receives email to accept transfer. 4) After acceptance, original owner retains Admin role but not billing access. 5) Billing contact should be updated separately in Billing → Billing Contact. 6) If original owner has already left and cannot initiate transfer, identity verification required — IT admin must contact enterprise-support with documentation.
+
+TICKET #2345 — Add/remove team members
+SYMPTOM: Admin wants to manage user seats.
+RESOLUTION: Invite users: Admin → Team → Invite Member → enter email → assign role. Roles available: Owner (1 per workspace), Admin (full admin access), Member (standard access), Viewer (read-only, doesn't use a paid seat). Remove users: Admin → Team → click member → Remove. Removed users lose access immediately. Their content remains in the workspace. If removing users causes you to go under your minimum seat count for your plan, you can downgrade on next renewal.
+
+TICKET #2789 — Organization name change / rebranding
+SYMPTOM: Company rebranded and needs workspace name and URL updated.
+RESOLUTION: Workspace display name: Admin → Settings → General → Workspace Name (instant, affects UI only). Custom subdomain change (company.yourapp.com): requires support intervention — submit request with new desired subdomain, we verify availability and make the change within 2 business days. Note: changing subdomain breaks any hardcoded URLs in integrations or bookmarks. Old subdomain cannot be held — it becomes available for others.
+
+═══════════════════════════════════════════════════════════════
+TICKET CATEGORY: INTEGRATIONS
+═══════════════════════════════════════════════════════════════
+
+TICKET #6501 — Salesforce sync not working
+SYMPTOM: Data not syncing between platform and Salesforce CRM.
+RESOLUTION: 1) Verify Salesforce integration is still authorized (Settings → Integrations → Salesforce → Check connection status). Tokens expire — reconnect if needed. 2) Check Salesforce user has API access enabled in their Salesforce profile. 3) Verify field mapping is correct (Settings → Integrations → Salesforce → Field Mapping). 4) Check sync logs for specific error codes (Settings → Integrations → Salesforce → Sync History). 5) Common error: Salesforce validation rules blocking record creation — check Salesforce error log. 6) If using Salesforce Sandbox, ensure you're connected to the right environment.
+
+TICKET #6734 — Slack notifications not being sent
+SYMPTOM: Configured Slack alerts but not receiving them.
+RESOLUTION: 1) Verify Slack app is still installed in workspace (can get disconnected when workspace admin changes). 2) Check notification rules are enabled (Settings → Notifications → Slack → toggle must be ON). 3) Verify the correct Slack channel is selected and bot has been invited to that channel (/invite @YourAppBot in Slack). 4) Check if notifications are set to "working hours only" and it's outside those hours. 5) Test by triggering a manual test notification. 6) If channel was recently archived or renamed, update the channel selection.

@@ -1,0 +1,150 @@
+PRODUCT FEATURES, ONBOARDING, AND HOW-TO GUIDE
+Platform Version 8.x | Updated March 2025
+
+═══════════════════════════════════════════════════════════════
+CHAPTER 1: GETTING STARTED — FIRST 30 MINUTES
+═══════════════════════════════════════════════════════════════
+
+1.1 ACCOUNT SETUP CHECKLIST
+After signing up, complete these steps in order:
+□ Step 1: Verify your email address (check inbox for verification link)
+□ Step 2: Complete your profile (name, role, profile photo)
+□ Step 3: Set up two-factor authentication (strongly recommended)
+□ Step 4: Invite your team members (Admin → Team → Invite)
+□ Step 5: Import your existing data (Settings → Import)
+□ Step 6: Connect your first integration (Settings → Integrations)
+□ Step 7: Customize your notification preferences (Settings → Notifications)
+□ Step 8: Explore the dashboard tour (click "?" → Start Tour)
+
+1.2 UNDERSTANDING YOUR DASHBOARD
+The main dashboard has 5 sections:
+HOME: Overview of recent activity, quick actions, team updates
+PROJECTS: All your workspaces and projects organized by category
+ANALYTICS: Usage statistics, performance metrics, trend reports
+TEAM: Member management, roles, permissions, activity logs
+SETTINGS: Account configuration, integrations, billing, security
+
+1.3 NAVIGATION SHORTCUTS
+Ctrl/Cmd + K: Command palette (search everything)
+Ctrl/Cmd + N: Create new item
+Ctrl/Cmd + /: Toggle sidebar
+Ctrl/Cmd + Shift + F: Full-text search across all content
+G then D: Go to Dashboard
+G then P: Go to Projects
+G then A: Go to Analytics
+
+═══════════════════════════════════════════════════════════════
+CHAPTER 2: CORE FEATURES EXPLAINED
+═══════════════════════════════════════════════════════════════
+
+2.1 PROJECTS AND WORKSPACES
+A Workspace is your top-level organization container. Each workspace has its own users, billing, and settings. One account can belong to multiple workspaces.
+A Project is a working area within a workspace. You can have unlimited projects on all paid plans. Projects can be set to: Public (all workspace members), Private (invited members only), or Hidden (admins only).
+Archive projects (not delete) to keep historical data without cluttering your workspace. Archived projects are searchable but not displayed in main navigation.
+
+2.2 USER ROLES AND PERMISSIONS
+
+OWNER: One per workspace. Full access including billing. Can delete workspace. Cannot be removed by other admins.
+ADMIN: Full access except billing and workspace deletion. Can manage all users except owner.
+MEMBER: Can create, edit, and delete their own content. Can view all public projects. Cannot manage users or settings.
+VIEWER: Read-only access. Can comment but not edit. Does not consume a paid seat.
+CUSTOM ROLES (Business/Enterprise): Create custom role with granular permissions. Set view/create/edit/delete permissions per resource type.
+
+2.3 ANALYTICS AND REPORTING
+Standard reports available:
+- Usage Overview: API calls, storage used, active users
+- Activity Log: Every action by every user with timestamp
+- Performance Report: Response times, error rates, uptime
+- Custom Reports (Business+): Drag-and-drop report builder, scheduled email delivery
+
+Exporting reports: Any report can be exported as CSV, Excel, or PDF. Scheduled exports can be emailed daily/weekly/monthly to any email address. API access to report data available for Business+ plans.
+
+2.4 API AND DEVELOPER TOOLS
+API Documentation: docs.company.com/api
+Authentication: Bearer token (API key) or OAuth 2.0
+API versioning: Current stable version is v3. v2 supported until December 2025. v1 deprecated.
+Rate limits: See plan details. Per-endpoint limits also apply — see API docs.
+Webhooks: Real-time event notifications. Supports 40+ event types. Configurable retry logic.
+SDKs officially supported: Python, JavaScript/Node.js, Ruby, PHP, Java, Go, .NET
+Community SDKs: Rust, Swift, Kotlin (community-maintained, not officially supported)
+
+2.5 INTEGRATIONS DIRECTORY
+
+CRM: Salesforce, HubSpot, Pipedrive, Zoho CRM
+Communication: Slack, Microsoft Teams, Google Chat
+Project Management: Jira, Asana, Linear, Monday.com, Trello, Notion
+Data: Google Sheets, Airtable, Snowflake, BigQuery
+Developer: GitHub, GitLab, Bitbucket, CircleCI
+SSO/Identity: Okta, Auth0, Azure AD, Google Workspace, OneLogin
+File Storage: Google Drive, Dropbox, Box, OneDrive
+E-commerce: Shopify, WooCommerce, Stripe
+Marketing: Mailchimp, Marketo, Intercom
+Custom: Zapier (1000+ apps), Make.com, Workato
+
+Setting up an integration: Settings → Integrations → Browse → Select → Connect → Configure permissions → Test → Save. Most integrations take under 5 minutes.
+
+═══════════════════════════════════════════════════════════════
+CHAPTER 3: ADVANCED FEATURES
+═══════════════════════════════════════════════════════════════
+
+3.1 AUTOMATION AND WORKFLOWS
+Available on Growth plan and above. Automation triggers include:
+- Time-based: Run at scheduled times or intervals
+- Event-based: Trigger on data changes, user actions, API events
+- Condition-based: Only trigger when specified criteria met
+
+Automation actions include: Send notifications, update records, call webhooks, create tasks, send emails, post to Slack.
+
+Pre-built templates: 50+ automation templates available in Settings → Automations → Browse Templates. Popular templates: New user onboarding sequence, Inactivity alerts, Data backup notifications, Approval workflows.
+
+3.2 CUSTOM FIELDS AND DATA MODELING
+Add custom fields to any data type: Text, Number, Date, Dropdown, Multi-select, Checkbox, URL, Email, Phone, File attachment, Formula (calculated field), Relation (link to other records).
+Custom fields are workspace-wide. Changes to field definitions affect all records. Required fields can be set — records cannot be saved without required fields.
+
+3.3 BULK OPERATIONS
+Select multiple items using Ctrl/Cmd+Click or Shift+Click. Bulk actions available: Delete, Move, Archive, Export, Change status, Assign to user, Add/remove tags. Bulk operations are logged in Activity Log for audit trail.
+
+3.4 SEARCH AND FILTERING
+Global search (Ctrl/Cmd+K) searches: Record titles, content, comments, user names, file names. Does NOT search: Archived records (by default), file contents (only file names).
+Advanced filters: Available on any list view. Filter by any field, condition (equals, contains, is before/after, is empty, etc.). Save filters as views. Share views with team.
+
+3.5 COMMENTING AND COLLABORATION
+@mention any team member in any comment to notify them. Thread replies keep conversations organized. Reactions (emoji) available on comments. Comments are included in data exports. Comment-only view available for stakeholders who need to see progress without editing.
+
+═══════════════════════════════════════════════════════════════
+CHAPTER 4: TROUBLESHOOTING COMMON ISSUES
+═══════════════════════════════════════════════════════════════
+
+4.1 DATA NOT APPEARING AFTER IMPORT
+Wait up to 30 minutes for large imports to process. Check Import History (Settings → Import → History) for status. If status shows "Failed": download the error report — each failed row is listed with the specific reason. Common causes: duplicate IDs, missing required fields, date format mismatch, value outside allowed range for dropdown fields.
+
+4.2 EMAILS NOT BEING RECEIVED
+Check spam/junk folder first. Add noreply@company.com to your contacts/whitelist. Corporate email firewalls sometimes block transactional emails — ask IT to whitelist the domain company.com. Check notification settings (Settings → Notifications) — may be disabled. If using custom domain email, ensure MX records are properly configured.
+
+4.3 PERFORMANCE ISSUES ON LARGE DATASETS
+Recommended limits per page/view: 500 records. For larger datasets, use filters to paginate. Avoid loading all records at once in API calls — use pagination parameters (limit, offset). Charts with more than 10,000 data points may render slowly — use aggregation to reduce points. Enable lazy loading in Settings → Performance (Business plan+).
+
+4.4 INTEGRATION STOPPED WORKING
+Most common cause: OAuth token expired. Go to Settings → Integrations → [Integration Name] → Reconnect. Check if integration provider had API changes or downtime (check their status page). Verify API keys haven't been rotated on the third-party side. Check our integration-specific documentation for any known issues or version requirements.
+
+4.5 FILE UPLOAD ISSUES
+Maximum file size: 100MB per file, 500MB per upload session.
+Supported file types: Images (JPG, PNG, GIF, WebP, SVG), Documents (PDF, DOC, DOCX, XLS, XLSX, PPT, PPTX, TXT, CSV), Video (MP4, MOV, AVI — max 500MB), Audio (MP3, WAV).
+Not supported: EXE, DMG, ZIP (security policy), ISO files.
+If upload seems stuck: check internet connection stability. Large files require stable connection — WiFi switching mid-upload will fail.
+
+═══════════════════════════════════════════════════════════════
+CHAPTER 5: ADMIN GUIDE
+═══════════════════════════════════════════════════════════════
+
+5.1 MANAGING USERS AT SCALE
+Bulk invite via CSV: Admin → Team → Bulk Invite → Download CSV template → Fill in emails and roles → Upload. Domain auto-join: Anyone with your company email domain auto-joins as Member when they sign up (Admin → Security → Domain Auto-Join). SCIM provisioning (Enterprise): Automatically sync users from your identity provider (Okta, Azure AD) — no manual invites needed.
+
+5.2 AUDIT LOG
+Full audit log available at Admin → Security → Audit Log. Records: Every login (including failures), every data change, every admin action, API access, permission changes. Export audit log for compliance: CSV or JSON, up to 12 months. Real-time audit log streaming to SIEM (Splunk, Datadog) available for Enterprise.
+
+5.3 IP ALLOWLISTING
+Restrict access to specific IP addresses or CIDR ranges. Admin → Security → IP Allowlist. Emergency access override: if admin is locked out due to IP restrictions, contact enterprise-support@company.com from registered email for temporary bypass. Warning: enable carefully — can lock out all users if configured incorrectly.
+
+5.4 DATA GOVERNANCE
+Field-level encryption available for sensitive custom fields (Enterprise). Data masking in exports: configure which fields are masked in CSV exports for non-admin users. Retention policies: automatically archive or delete records after specified period.

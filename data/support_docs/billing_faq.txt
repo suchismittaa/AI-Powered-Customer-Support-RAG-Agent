@@ -1,0 +1,25 @@
+BILLING & PAYMENTS - FREQUENTLY ASKED QUESTIONS
+
+Q: How do I update my payment method?
+A: To update your payment method, log into your account dashboard and navigate to Settings > Billing > Payment Methods. Click "Add Payment Method" to add a new credit card, debit card, or PayPal account. Once added, you can set it as the default payment method. Old payment methods can be removed after a new default is set. Changes take effect immediately for future billing cycles.
+
+Q: Why was I charged twice this month?
+A: Double charges can occur if a payment failed initially and was retried. Check your email for failed payment notifications. If you see two successful charges, contact support immediately with your account ID and transaction dates. We will investigate and issue a refund within 3-5 business days if a duplicate charge is confirmed. You can view all charges under Account > Billing History.
+
+Q: How do I request a refund?
+A: Refunds are available within 30 days of purchase for most products. To request a refund, go to Account > Order History, find the order, and click "Request Refund." Provide a brief reason for the refund. Approved refunds are processed within 5-7 business days back to your original payment method. Subscription refunds are prorated based on unused days. Digital downloads are non-refundable once accessed.
+
+Q: What payment methods do you accept?
+A: We accept all major credit cards (Visa, MasterCard, American Express, Discover), PayPal, Apple Pay, Google Pay, and bank transfers (ACH) for annual plans. Cryptocurrency payments are not currently supported. Corporate accounts can request invoice-based NET-30 payment terms by contacting our sales team.
+
+Q: How do I cancel my subscription?
+A: To cancel your subscription, go to Account > Subscription > Cancel Plan. You will be asked to confirm the cancellation and optionally provide feedback. Your access continues until the end of the current billing period. We do not offer partial-month refunds for cancellations. Cancelled accounts retain read-only access to their data for 90 days before deletion.
+
+Q: Why did my subscription price change?
+A: Price changes may occur due to plan updates or promotional periods ending. We send email notifications at least 30 days before any price increase. You can lock in your current rate by switching to an annual plan. Legacy plan pricing is honored until you make plan changes. If you believe a price change is an error, contact billing support with your account number.
+
+Q: How do I get a VAT invoice?
+A: For VAT invoices, go to Account > Billing > Invoice Settings and add your VAT registration number. Future invoices will automatically include your VAT details. For retroactive VAT invoices on past charges, submit a request through our billing support portal with your VAT number and the invoice dates needed. Processing takes 2-3 business days.
+
+Q: What happens if my payment fails?
+A: If a payment fails, we retry the charge 3 times over 7 days. You will receive email notifications for each failed attempt. During this grace period, your account remains active. If all retries fail, your account is downgraded to the free tier and your data is preserved for 30 days. Update your payment method immediately to restore full access without data loss.
