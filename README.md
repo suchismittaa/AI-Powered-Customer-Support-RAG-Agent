@@ -16,7 +16,7 @@ built directly on top of it.
 - `ingest.py` — chunking + embedding + ChromaDB storage pipeline
 - `auth/` — JWT auth, bcrypt password hashing, per-org conversation & feedback logs
 - `evalution/` — token-F1 / triage-accuracy evaluation engine
-- `app.py` — the original Streamlit UI (kept as a legacy/alternate interface)
+- `streamlit_app.py` — the original Streamlit UI (kept as a legacy/alternate interface)
 
 **New:**
 - `tickets.py` — SQLite-backed support ticket store, with category/priority
@@ -49,7 +49,7 @@ python api.py
 # → open http://localhost:8000
 
 # (optional) the original Streamlit demo still works independently
-streamlit run app.py
+streamlit run streamlit_app.py
 ```
 
 Demo accounts (seeded automatically on first run):
